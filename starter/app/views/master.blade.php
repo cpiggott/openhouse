@@ -74,9 +74,11 @@
         {{ HTML::script('js/jquery-1.11.2.min.js') }}
         {{ HTML::script('js/bootstrap.min.js') }}
 
+
+        <!-- footer -->
         <div class="navbar navbar-default navbar-fixed-bottom">
             <div class="container">
-                <p class="navbar-text pull-left">Hello</p>
+                <p class="navbar-text pull-left">Department of Computing & Information Sciences</p>
             </div>
         </div>
 

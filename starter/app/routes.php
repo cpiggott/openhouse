@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('home');
-});
+Route::get('/', array(
+	'as' => 'home',
+	'uses' => 'HomeController@showWelcome'
+	)
+);
 
 Route::get('/signout', array(
 	'as' => 'signout',
