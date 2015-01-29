@@ -20,12 +20,6 @@
 
     {{ Form::open(array('url' => 'create', 'class' => 'form-horizontal')) }}
       <div class="form-group">
-        <label for="inputEmail"  class="col-sm-2 control-label">Username</label>
-        <div class="col-sm-10">
-          <input type="text" name="username" class="form-control" id="username" placeholder="Username" {{ (Input::old('username')) ? ' value="' . e(Input::old('username')) . '"' : '' }}>
-        </div>
-      </div>
-      <div class="form-group">
         <label for="inputEmail"  class="col-sm-2 control-label">Email</label>
         <div class="col-sm-10">
           <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" {{ (Input::old('email')) ? ' value="' . e(Input::old('email')) . '"' : '' }}>

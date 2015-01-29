@@ -3,7 +3,7 @@
     <head>
         <title>
             @section('title')
-            Laravel 4 - Starter
+                KSU CIS Open House
             @show
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +36,7 @@
                         <span class="icon-bar"></span>
                     </button>
 
-                    <a class="navbar-brand" href="">Laravel Starter</a>
+                    <a class="navbar-brand" href="">CIS Open House</a>
                 </div>
                 <!-- Everything you want hidden at 940px or less, place within here -->
                 <div class="collapse navbar-collapse">
@@ -74,5 +74,13 @@
         {{ HTML::script('js/jquery-1.11.2.min.js') }}
         {{ HTML::script('js/bootstrap.min.js') }}
 
+        <div class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container">
+                <p class="navbar-text pull-left">Hello</p>
+            </div>
+        </div>
+
     </body>
+
+
 </html>

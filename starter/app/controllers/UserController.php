@@ -66,7 +66,6 @@ class UserController extends BaseController {
     }
 
     public function postCreate(){
-    	$username = Input::get('username');
     	$email = Input::get('email');
 		$password = Input::get('password');
 		$password_confirm = Input::get('password_confirm');
@@ -87,7 +86,6 @@ class UserController extends BaseController {
 		if($validator->passes()){
 
 			$user = User::create( array(
-					'username' => $username,
 					'email' 	=> $email,
 					'password'	=> Hash::make($password)
 				)
