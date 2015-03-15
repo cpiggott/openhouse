@@ -1,6 +1,6 @@
 <?php
 
-class HomeController extends BaseController {
+class LimitedController extends BaseController {
 
 	/*
 	|--------------------------------------------------------------------------
@@ -15,13 +15,11 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	public function showLimited()
 	{
-		if(Auth::check()){
-			return View::make('authHome');
-		} else {
-			return View::make('home');
-		}
+
+		return View::make('views.github');
+
 	}
 
 }

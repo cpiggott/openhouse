@@ -10,6 +10,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <!-- CSS are placed here -->
+
         {{ HTML::style('css/bootstrap.css') }}
         {{ HTML::style('css/bootstrap-theme.css') }}
 
@@ -20,40 +21,14 @@
                 }
             @show
         </style>
-       
-        
+
+
     </head>
 
     <body>
         <!-- Navbar -->
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+        @yield('header')
 
-                    <a class="navbar-brand" href="">CIS Open House</a>
-                </div>
-                <!-- Everything you want hidden at 940px or less, place within here -->
-                <div class="collapse navbar-collapse">
-                   <ul class="nav navbar-nav">
-                        <li><a href="{{{ URL::to('') }}}">Home</a></li>
-                        @if ( Auth::guest() )
-                            <li>{{ HTML::link('signin', 'Sign In') }}</li>
-                            <li>{{ HTML::link('create', 'Create Account') }}</li>
-                        @else
-                            <li>{{ HTML::link('signout', 'Sign Out') }}</li>
-                        @endif
-                    </ul> 
-                </div>
-
-                
-            </div>
-        </div> 
 
         <!-- Container -->
         <div class="container">
@@ -76,11 +51,11 @@
 
 
         <!-- footer -->
-        <div class="navbar navbar-default navbar-fixed-bottom">
+        <!-- <div class="navbar navbar-default navbar-fixed-bottom">
             <div class="container">
                 <p class="navbar-text pull-left">Department of Computing & Information Sciences</p>
             </div>
-        </div>
+        </div> -->
 
     </body>
 

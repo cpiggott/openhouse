@@ -23,6 +23,12 @@ Route::get('/signout', array(
 	)
 );
 
+Route::get('/limited', array(
+	'as' => 'limited',
+	'uses' => 'LimitedController@showLimited'
+	)
+);
+
 
 
 /* Un-authenticated users */
