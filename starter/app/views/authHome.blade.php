@@ -49,6 +49,7 @@
 
 <div>
     <p> Welcome {{Auth::user()->email}}</p>
+    {{ HTML::link('display/create', 'Create a Display') }}
 </div>
 
 

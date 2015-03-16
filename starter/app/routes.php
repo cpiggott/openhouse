@@ -41,6 +41,12 @@ Route::post('/display/create', array(
 	)
 );
 
+Route::get('display/view/{code}', array(
+	'as' => 'viewDispaly',
+	'uses' => 'DisplayController@getDisplay'
+	)
+);
+
 
 
 /* Un-authenticated users */
