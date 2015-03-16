@@ -13,6 +13,7 @@
 
         {{ HTML::style('css/bootstrap.css') }}
         {{ HTML::style('css/bootstrap-theme.css') }}
+        <script src="/ckeditor/ckeditor.js" type="text/javascript"></script>
 
         <style>
             @section('styles')

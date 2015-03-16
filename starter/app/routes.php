@@ -29,6 +29,18 @@ Route::get('/limited', array(
 	)
 );
 
+Route::get('/display/create', array(
+	'as' => 'createDisplay',
+	'uses' => 'DisplayController@getCreateDisplay'
+	)
+);
+
+Route::post('/display/create', array(
+	'as' => 'createDisplay',
+	'uses' => 'DisplayController@postCreateDisplay'
+	)
+);
+
 
 
 /* Un-authenticated users */
