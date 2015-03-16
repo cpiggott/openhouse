@@ -6,7 +6,7 @@
 @stop
 
 @section('header')
-<div class="navbar navbar-inverse navbar-inverse-github navbar-fixed-top" role="navigation" stlye="color: #f5f5f5">
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" stlye="color: #f5f5f5">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

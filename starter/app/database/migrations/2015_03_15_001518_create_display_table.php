@@ -12,7 +12,17 @@ class CreateDisplayTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('displays', function(Blueprint $table)
+				{
+						$table->increments('id');
+						$table->string('teamname', 64);
+						$table->string('project_name', 64);
+						$table->string('team_members', 256);
+						$table->longtext('content');
+						$table->integer('user_id')->unsigned();
+						$table->foreign('user_id')->references('id')->on('users');
+						$table->timestamps();
+				});
 	}
 
 	/**
@@ -22,7 +32,7 @@ class CreateDisplayTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('displays');
 	}
 
 }
