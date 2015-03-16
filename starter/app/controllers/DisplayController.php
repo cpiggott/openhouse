@@ -33,10 +33,9 @@ class DisplayController extends BaseController {
   }
 
 
-
+  //Add more error checking
+  //Creates the Display in the database
   public function postCreateDisplay(){
-
-//Add more error checking
     $teamName = Input::get('teamName');
     $projectName = Input::get('projectName');
     $username = Input::get('userName');
@@ -70,7 +69,7 @@ class DisplayController extends BaseController {
 
       switch ($display->type) {
         case 0:
-            echo "Limited Dispaly";
+            return View::make('views.github')->with('display', $display);
             break;
         case 1:
             echo "Open Class Display";
@@ -87,18 +86,9 @@ class DisplayController extends BaseController {
         case 5:
             echo "Student Club Display";
             break;
-
       }
-
-    }
-
-    else {
+    } else {
       echo "Something went wrong";
     }
-
   }
-
-
-
-
 }
