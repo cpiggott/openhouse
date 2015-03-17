@@ -18,6 +18,8 @@
     <h2>Display Information</h2>
 </div>
 
+
+
     {{ Form::open(array('url' => 'display/create', 'class' => 'form-horizontal')) }}
       <div class="form-group">
         <label for="inputTeamName"  class="col-sm-2 control-label">Team Name</label>
@@ -65,4 +67,12 @@
     </form>
 
 {{ Form::close() }}
+
+<div>
+  <h3> Your Project QR Code </h3>
+</div>
+
+<div class="">
+    {{ QrCode::size(300)->generate(Request::url()); }}
+</div>
 @stop
