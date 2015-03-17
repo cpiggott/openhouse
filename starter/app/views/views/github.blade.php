@@ -66,7 +66,7 @@
         <div class="panel-body">
 
           <div class="page-header">
-              <h2>{{$display->project_name}}</h2>
+              <h2>{{ $display->project_name }}</h2>
           </div>
 
           {{$display->content}}

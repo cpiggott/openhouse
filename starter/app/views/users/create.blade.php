@@ -2,7 +2,7 @@
 
 @section('title')
 @parent
-:: Login
+:: Create Account
 @stop
 
 {{-- Content --}}
@@ -10,7 +10,7 @@
     @if ($errors->has())
         <div id="errors" class="alert alert-danger">
             @foreach ($errors->all() as $error)
-                {{ $error }}<br>        
+                {{ $error }}<br>
             @endforeach
         </div>
         @endif
@@ -37,7 +37,7 @@
           <input type="password" name="password_confirm"  class="form-control" id="inputPassword" placeholder="Re-type Password">
         </div>
       </div>
-      
+
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
           <button type="submit" class="btn btn-default">Create Account</button>

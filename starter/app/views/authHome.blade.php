@@ -44,13 +44,34 @@
         </div>
         @endif
 <div class="page-header">
-    <h2>Welcome to the CIS Open House Page!</h2>
+    <h2>Welcome to the CIS Open House Admin Page.</h2>
+    <p>Please create a project by clicking the link below or click on one of the projects in "Your Projects" table to edit it.</p>
 </div>
 
 <div>
-    <p> Welcome {{Auth::user()->email}}</p>
-    {{ HTML::link('display/create', 'Create a Display') }}
+    <p> Currently logged in as:  {{Auth::user()->email}}</p>
+    <h3>{{ HTML::link('display/create', 'Create a Display') }}</h2>
+    <br>
+    <br>
 </div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="list-group">
+      <a href="" class="list-group-item disabled">Edit Your Projects(Click to edit )</a>
+      <?php
+        $userid = Auth::user()->id;
+        $displays = DB::table('displays')->where('user_id', '=', $userid)->orderby('updated_at', 'desc')->get();
+      ?>
+      @foreach ($displays as $display)
+        <a href="display/edit/{{$display->id}}" class="list-group-item"><span class="glyphicon glyphicon-pencil"></span> &nbsp &nbsp {{$display->project_name}} last editied: {{$display->updated_at}} </a>
+      @endforeach
+
+    </div>
+  </div>
+</div>
+
+
 
 
 @stop
