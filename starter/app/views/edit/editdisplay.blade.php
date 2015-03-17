@@ -2,7 +2,7 @@
 
 @section('title')
 @parent
-:: Create Display
+:: Edit Display
 @stop
 
 {{-- Content --}}
@@ -22,25 +22,25 @@
       <div class="form-group">
         <label for="inputTeamName"  class="col-sm-2 control-label">Team Name</label>
         <div class="col-sm-10">
-          <input type="text" name="teamName" class="form-control" id="inputTeamName" placeholder="TeamName" {{ (Input::old('teamName')) ? ' value="' . e(Input::old('teamName')) . '"' : '' }}>
+          <input type="text" name="teamName" class="form-control" id="inputTeamName" placeholder="TeamName" value="{{$display->teamname}}">
         </div>
       </div>
       <div class="form-group">
         <label for="inputProjectName" class="col-sm-2 control-label">Project Name</label>
         <div class="col-sm-10">
-          <input type="text" name="projectName"  class="form-control" id="projectName" placeholder="Project Name">
+          <input type="text" name="projectName"  class="form-control" id="projectName" placeholder="Project Name" value="{{$display->project_name}}">
         </div>
       </div>
       <div class="form-group">
         <label for="inputName" class="col-sm-2 control-label">Team Member</label>
         <div class="col-sm-10">
-          <input type="text" name="userName"  class="form-control" id="userName" placeholder="Your Name">
+          <input type="text" name="userName"  class="form-control" id="userName" placeholder="Your Name" >
         </div>
       </div>
       <div class="form-group">
         <label for="inputType" class="col-sm-2 control-label">Display Type</label>
         <div class="col-sm-10">
-          <select name="displayType" id="displayType" class="form-control">
+          <select name="displayType" id="displayType" class="form-control" value="{{$display->type}}">
             <option value="0">Limited Display</option>
             <option value="1">Open Class Display</option>
             <option value="2">Technical Display</option>
@@ -53,7 +53,7 @@
       <div class="form-group">
         <label for="inputName" class="col-sm-2 control-label">Display Information</label>
         <div class="col-sm-10">
-          <textarea name="content" class="form-control ckeditor" id="contentInput">Insert Snippet here</textarea>
+          <textarea name="content" class="form-control ckeditor" id="contentInput" >{{$display->content}}</textarea>
         </div>
       </div>
       <div class="form-group">

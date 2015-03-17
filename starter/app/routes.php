@@ -47,6 +47,12 @@ Route::get('display/view/{code}', array(
 	)
 );
 
+Route::get('display/edit/{code}', array(
+	'as' => 'editDispaly',
+	'uses' => 'DisplayController@editDisplay'
+	)
+);
+
 
 
 /* Un-authenticated users */

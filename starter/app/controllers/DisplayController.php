@@ -91,4 +91,15 @@ class DisplayController extends BaseController {
       echo "Something went wrong";
     }
   }
+
+  public function editDisplay($code){
+    $display = Display::find($code);
+    if(Auth::check() && $display->user_id == Auth::user()->id){
+      //var_dump($display->teamname);
+      return View::make('edit.editdisplay')->with('display', $display);
+    } else {
+      return Redirect::to('')->with('error', 'You are nto authorized to create a display.');
+    }
+  }
+
 }
