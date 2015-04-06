@@ -21,7 +21,7 @@
         <!-- Everything you want hidden at 940px or less, place within here -->
         <div class="collapse navbar-collapse">
            <ul class="nav navbar-nav">
-                <li><a href="{{{ URL::to('') }}}">Home</a></li>
+                <li><a href="{{ URL::to('') }}">Home</a></li>
                 @if ( Auth::guest() )
                     <!-- <li>{{ HTML::link('signin', 'Sign In') }}</li> -->
                     <!-- <li>{{ HTML::link('create', 'Create Account') }}</li> -->
@@ -69,7 +69,7 @@
               <h2>{{ $display->project_name }}</h2>
           </div>
 
-          {{$display->content}}
+          {{stripslashes($display->content)}}
         </div>
     </div>
   </div>

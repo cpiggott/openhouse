@@ -43,10 +43,9 @@
           <select name="displayType" id="displayType" class="form-control">
             <option value="0">Limited Display</option>
             <option value="1">Open Class Display</option>
-            <option value="2">Technical Display</option>
-            <option value="3">Freshman/Sophomore Display</option>
-            <option value="4">Graduate Display</option>
-            <option value="5">Student Club Display</option>
+            <option value="2">Freshman/Sophomore Display</option>
+            <option value="3">Graduate Display</option>
+            <option value="4">Student Club Display</option>
           </select>
         </div>
       </div>

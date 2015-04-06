@@ -18,7 +18,7 @@
 
 <body>
 <header>
-    <img id="hlogo" src="soassets/cis.svg" alt="CIS" />
+    <img id="hlogo" src="/soassets/cis.svg" alt="CIS" />
     <h1><a href="#">Wildcat<span>Exchange</span></a></h1>
     <input type="checkbox" name="navbtn" id="navbtn" />
     <label for="navbtn">&#9776;</label>
@@ -33,7 +33,7 @@
     </nav>
 </header>
 <div id="main">
-    <img id="mainimg" src="soassets/so.svg" alt="K-State" />
+    <img id="mainimg" src="/soassets/so.svg" alt="K-State" />
     <nav id="mainnav">
         <ul>
             <li><a href="#">Questions</a></li>
@@ -54,9 +54,9 @@
         <hr />
         <div id="tourright">
             <h3>Here's how it works:</h3>
-            <p><img src="soassets/tourleft.png" src="Question" />Anybody can ask a question</p>
-            <p><img src="soassets/tourmid.png" src="Answer" />Anybody can answer</p>
-            <p><img src="soassets/tourright.png" src="Best" />The best answers are voted up and rise to the top</p>
+            <p><img src="/soassets/tourleft.png" src="Question" />Anybody can ask a question</p>
+            <p><img src="/soassets/tourmid.png" src="Answer" />Anybody can answer</p>
+            <p><img src="/soassets/tourright.png" src="Best" />The best answers are voted up and rise to the top</p>
         </div>
     </div>
     <div id="questions">

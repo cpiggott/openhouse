@@ -18,9 +18,11 @@
     <h2>Display Information</h2>
 </div>
 
+<?php
+$displayURL = 'display/edit/'.$display->id;
+ ?>
 
-
-    {{ Form::open(array('url' => 'display/edit/'echo $display->id'', 'class' => 'form-horizontal')) }}
+    {{ Form::open(array('url' => $displayURL, 'class' => 'form-horizontal')) }}
       <div class="form-group">
         <label for="inputTeamName"  class="col-sm-2 control-label">Team Name</label>
         <div class="col-sm-10">
@@ -45,17 +47,16 @@
           <select name="displayType" id="displayType" class="form-control" value="{{$display->type}}">
             <option value="0">Limited Display</option>
             <option value="1">Open Class Display</option>
-            <option value="2">Technical Display</option>
-            <option value="3">Freshman/Sophomore Display</option>
-            <option value="4">Graduate Display</option>
-            <option value="5">Student Club Display</option>
+            <option value="2">Freshman/Sophomore Display</option>
+            <option value="3">Graduate Display</option>
+            <option value="4">Student Club Display</option>
           </select>
         </div>
       </div>
       <div class="form-group">
         <label for="inputName" class="col-sm-2 control-label">Display Information</label>
         <div class="col-sm-10">
-          <textarea name="content" class="form-control ckeditor" id="contentInput" >{{$display->content}}</textarea>
+          <textarea name="content" class="form-control ckeditor" id="contentInput" >{{stripslashes($display->content)}}</textarea>
         </div>
       </div>
       <div class="form-group">

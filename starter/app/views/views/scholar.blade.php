@@ -32,7 +32,7 @@
 </div>
 <div id="search">
     <div id="swrapper">
-    <img src="scholarassets/cis.svg" alt="CIS" />
+    <img src="/scholarassets/cis.svg" alt="CIS" />
     <input type="text" name="search" />
     <button type="submit">Go</button>
     </div>
@@ -47,7 +47,7 @@
         <article>
             <h3><a href="">{{ $display->project_name }}</a></h3>
               <span>{{ $display->teamname }}</span>
-            <p>{{ $dispaly->content }}</p>
+            <p>{{ stripslashes($display->content) }}</p>
         </article>
         <hr />
     </div>

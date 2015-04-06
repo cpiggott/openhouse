@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-<title>Facebook</title>
+<title>{{$display->teamname}}</title>
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
 {{ HTML::style('css/facebookcss.css') }}
 <!--[if lt IE 9]>
@@ -91,49 +91,48 @@
     <div id="pics">
         <div id="cover"></div>
         <div id="profile"></div>
-        <h1>K-State ACM</h1>
+        <h1>{{$display->teamname}}</h1>
     </div>
 </header>
 <div id="main">
     <nav>
         <ul>
-            <li><a href="#"><img src="facebookassets/profile/1.jpg"/><h3>About</h3></a></li>
-
-            <li><a href="#"><img src="facebookassets/profile/2.jpg" /><h3>Photos</h3></a></li>
-            <li><a href="#"><img src="facebookassets/profile/3.jpg" /><h3>Schedule</h3></a></li>
+            <li><a href="#"><img src="/facebookassets/profile/1.jpg"/><h3>About</h3></a></li>
+            <li><a href="#"><img src="/facebookassets/profile/2.jpg" /><h3>Photos</h3></a></li>
+            <li><a href="#"><img src="/facebookassets/profile/3.jpg" /><h3>Schedule</h3></a></li>
 
         </ul>
     </nav>
     <article id="about">
         <h3>ABOUT</h3>
         <hr />
-        <p>K-State ACM meets at K-State.</p>
+        <p>{{$display->teamname}} meets at K-State.</p>
         <p>The CIS department is in Nichols Hall.</p>
-        <p>Your friend since 2000.</p>
         <hr />
         <p><a href="#">See more...</a></p>
+    </article>
+    <article id="schedule">
+        <h3>Information</h3>
+        <hr />
+        <p>{{stripslashes($display->content)}}</p>
     </article>
     <article id="photos">
         <h3>PHOTOS</h3>
         <hr />
         <!-- Thumbnail -->
-        <a class="thumblink" href="#img1"><img class="thumbnail" src="facebookassets/profile/1.jpg" /></a>
+        <a class="thumblink" href="#img1"><img class="thumbnail" src="/facebookassets/profile/1.jpg" /></a>
         <!-- Lightbox -->
-        <a href="#_" class="lightbox" id="img1"><img src="facebookassets/profile/1.jpg"></a>
+        <a href="#_" class="lightbox" id="img1"><img src="/facebookassets/profile/1.jpg"></a>
         <!-- Thumbnail -->
-        <a class="thumblink" href="#img2"><img class="thumbnail" src="facebookassets/profile/2.jpg" /></a>
+        <a class="thumblink" href="#img2"><img class="thumbnail" src="/facebookassets/profile/2.jpg" /></a>
         <!-- Lightbox -->
-        <a href="#_" class="lightbox" id="img2"><img src="facebookassets/profile/2.jpg"></a>
+        <a href="#_" class="lightbox" id="img2"><img src="/facebookassets/profile/2.jpg"></a>
         <!-- Thumbnail -->
-        <a class="thumblink" href="#img3"><img class="thumbnail" src="facebookassets/profile/3.jpg" /></a>
+        <a class="thumblink" href="#img3"><img class="thumbnail" src="/facebookassets/profile/3.jpg" /></a>
         <!-- Lightbox -->
-        <a href="#_" class="lightbox" id="img3"><img src="facebookassets/profile/3.jpg"></a>
+        <a href="#_" class="lightbox" id="img3"><img src="/facebookassets/profile/3.jpg"></a>
     </article>
-    <article id="schedule">
-        <h3>SCHEDULE</h3>
-        <hr />
-        <p>Bacon ipsum dolor amet porchetta cupim frankfurter, ribeye swine bresaola venison. Cow spare ribs landjaeger kielbasa short ribs pastrami pork chop, rump cupim shoulder hamburger boudin capicola. Pork loin pancetta swine, shankle picanha bresaola pork. Chicken tongue fatback prosciutto, meatball andouille strip steak short loin. Tail short loin spare ribs fatback, sausage shank flank meatball porchetta pastrami beef ham hock corned beef t-bone.</p>
-    </article>
+
 </div>
 </body>
 </html>
