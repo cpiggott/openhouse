@@ -38,7 +38,7 @@ select, input, textarea {font: 99% sans-serif;}
 table {font-size: inherit; font: 100%;}
 small {font-size: 85%;}
 strong {font-weight: bold;}
-td, td img {vertical-align: top;} 
+td, td img {vertical-align: top;}
 sub, sup {font-size: 75%; line-height: 0; position: relative;}
 sup {top: -0.5em;}
 sub {bottom: -0.25em;}
@@ -47,9 +47,9 @@ pre, code, kbd, samp {font-family: monospace, sans-serif;}
 button, input, select, textarea {margin: 0;}
 button, input[type=button] {width: auto; overflow: visible;}
 .ie7 img {-ms-interpolation-mode: bicubic;}
-.clearfix:before, .clearfix:after {content: "\0020"; display: block; height: 0; overflow: hidden;}  
-.clearfix:after {clear: both;}  
-.clearfix {zoom: 1;} 
+.clearfix:before, .clearfix:after {content: "\0020"; display: block; height: 0; overflow: hidden;}
+.clearfix:after {clear: both;}
+.clearfix {zoom: 1;}
 
 /*
 ---------------------------------------------------
@@ -130,7 +130,7 @@ header {
 #search input, #search button {
     display: inline-block;
     float: left;
-    margin: 5px auto;
+    margin: 3px auto;
 }
 
 #search input[type=text] {
@@ -141,6 +141,12 @@ header {
     outline: none;
     border: none;
     border-radius: 2px 0px 0px 2px;
+}
+
+@media screen and (min-width: 892px){
+#search input {
+    margin: 5px auto;
+}
 }
 
 #search button {
@@ -155,6 +161,8 @@ header {
     background-size: contain;
     background-position: center;
     border-radius: 0px 2px 2px 0px;
+    color: #FFFFFF;
+    font-size: 1em;
 }
 
 #search button:hover {
@@ -240,67 +248,69 @@ footer nav ul li a {
                   Desktop Styles
 ---------------------------------------------------
 */
-    
+
 @media screen and (min-width: 1024px){
 #bar {
     padding-left: 70px;
 }
-    
+
 #bar h1 {
     display: none;
 }
-    
+
 #bar nav {
     display: inline-block;
 }
-    
+
 #bar nav ul {
     display: block;
 }
-    
+
 #bar nav ul li {
     display: inline-block;
-    
+
 }
-    
+
 #bar nav ul li a {
     display: block;
     height: 100%;
     padding: 0px 10px 0px 10px;
     color: #E3E3E3;
 }
-    
+
 #search {
     height: 75px;
     text-align: left;
 }
-    
+
 #swrapper {
     margin-left: 70px;
 }
-    
+
 #search input, #search button {
     margin: 20px auto;
     border-radius: 2px;
 }
-    
+
+#search input {
+    margin: 20px auto;
+}
+
 #swrapper img {
     float: left;
     display: inline-block;
     height: 75px;
     margin-right: 50px;
 }
-    
+
 #search input[type=text] {
-    min-width: 500px;
-    width: 88%;
-    max-width: 400px;
+    width: 550px;
 }
-    
+
 #search button {
     margin-left: 10px;
 }
-    
+
 #results article, #results hr {
     width: 50%;
 }
