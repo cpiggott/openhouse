@@ -1,0 +1,376 @@
+@charset "UTF-8";
+/*
+CSS Document
+By Alex Todd
+*/
+
+/*
+HTML5 Reset
+----------------------------------------------------------
+Eric Meyer                  :: http://meyerweb.com
+HTML5 Doctor                :: http://html5doctor.com
+HTML5 Boilerplate           :: http://html5boilerplate.com
+----------------------------------------------------------
+*/
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {margin: 0; padding: 0; border: 0; font-size: 100%; font-weight: normal; vertical-align: baseline; background: transparent;}
+article, aside, figure, footer, header, nav, section, details, summary {display: block;}
+html {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+img, object, embed {max-width: 100%;}
+html {overflow-y: scroll;}
+ul, li {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+del {text-decoration: line-through;}
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+table {border-collapse: collapse; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+input, select {vertical-align: middle;}
+pre {white-space: pre; white-space: pre-wrap; white-space: pre-line; word-wrap: break-word;}
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom;}
+.ie7 input[type="checkbox"] {vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+select, input, textarea {font: 99% sans-serif;}
+table {font-size: inherit; font: 100%;}
+small {font-size: 85%;}
+strong {font-weight: bold;}
+td, td img {vertical-align: top;} 
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+.clickable,label, input[type=button], input[type=submit], input[type=file], button {cursor: pointer;}
+button, input, select, textarea {margin: 0;}
+button, input[type=button] {width: auto; overflow: visible;}
+.ie7 img {-ms-interpolation-mode: bicubic;}
+.clearfix:before, .clearfix:after {content: "\0020"; display: block; height: 0; overflow: hidden;}  
+.clearfix:after {clear: both;}  
+.clearfix {zoom: 1;} 
+
+/*
+---------------------------------------------------
+                  General Styles
+---------------------------------------------------
+*/
+h1 {display: block; font-size: 2em; margin-before: 0.67em; margin-after: 0.67em; margin-start: 0; margin-end: 0; font-weight: 300;}
+h2 {display: block; font-size: 1.5em; margin-before: 0.83em; margin-after: 0.83em; margin-start: 0; margin-end: 0; font-weight: 300;}
+h3 {display: block; font-size: 1.17em; margin-before: 1em; margin-after: 1em; margin-start: 0; margin-end: 0; font-weight: bold;}
+h4 {display: block; margin-before: 1.33em; margin-after: 1.33em; margin-start: 0; margin-end: 0; font-weight: bold;}
+h5 {display: block; font-size: .83em; margin-before: 1.67em; margin-after: 1.67em; margin-start: 0; margin-end: 0; font-weight: bold;}
+h6 {display: block; font-size: .67em; margin-before: 2.33em; margin-after: 2.33em; margin-start: 0; margin-end: 0; font-weight: bold;}
+a:link, a:visited, a:hover, a:active {color: #FFFFFF; text-decoration: none; outline: 0;}
+
+
+/*
+---------------------------------------------------
+              Mobile/Initial Styles
+---------------------------------------------------
+*/
+html, body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #DCDEE3;
+}
+
+header {
+    display: block;
+    width: 100%;
+    height: 45px;
+    background-color: #7D53B4;
+}
+
+header nav, header nav ul {
+    display: block;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline-block;
+    width: 15.5%;
+}
+
+header nav ul li a {
+    display: block;
+    height: 100%;
+    padding: 8px 0px 3px 0px;
+}
+
+header nav ul li a svg {
+    height: 30px;
+}
+
+header nav ul li a:hover svg path {
+    fill: #FFFFFF;
+}
+
+#pics {
+    display: block;
+    width: 100%;
+}
+
+#cover, #profile {
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#cover {
+    display: inline-block;
+    width: 100%;
+    height: 240px;
+    background-image: url(assets/cover.jpg);
+}
+
+#profile {
+    display: inline-block;
+    width: 96px;
+    height: 96px;
+    margin: -110px 0px 0px 15px;
+    border: 2px solid #FFFFFF;
+    border-radius: 2px;
+    background-image: url(assets/profile.jpg);
+}
+
+#pics h1 {
+    display: inline-block;
+    float: left;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 33px;
+    letter-spacing: -1px;
+    margin: -78px 0px 0px 125px;
+    color: #FFFFFF;
+    -webkit-text-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    -moz-text-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+}
+
+#main {
+    display: block;
+    width: 100%;
+}
+
+#main nav, #main nav ul {
+    display: block;
+    text-align: center;
+}
+
+#main nav ul li {
+    display: inline-block;
+    margin: 15px 0px 15px 1px;
+    width: 96px;
+    height: 89px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+
+#main nav ul li:first-child {
+    margin: 15px 0px 15px 0px;
+}
+
+@media screen and (min-width: 400px){
+#main nav ul li, #main nav ul li:first-child {
+    margin: 15px 4% 15px 4%;
+} 
+}
+
+#main nav ul li a h3 {
+    line-height: 25px;
+    font-size: 1em;
+    font-weight: 400;
+    color: #000000;
+}
+
+#main nav ul li a img {
+    display: block;
+    width: 96px;
+    height: 64px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+#main article {
+    display: block;
+    width: 95%;
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0 1px 1px #b3b7bd, 0 0 1px #abaeb6;
+    -mox-box-shadow: 0 1px 1px #b3b7bd, 0 0 1px #abaeb6;
+    box-shadow: 0 1px 1px #b3b7bd, 0 0 1px #abaeb6;
+}
+
+#main article a {
+    color: #000000;
+}
+
+#main article h3 {
+    font-size: 1em;
+}
+
+#main article p {
+    margin-top: 10px;
+}
+
+.thumbnail {
+    width: 100%;
+    pointer-events: none;
+    cursor: default;
+}
+
+.thumblink {
+    display: inline;
+    pointer-events: none;
+    cursor: default;
+}
+
+.lightbox {
+	display: none;
+}
+
+/*
+---------------------------------------------------
+                  Desktop Styles
+---------------------------------------------------
+*/
+    
+@media screen and (min-width: 1024px){
+header nav ul {
+    width: 1000px;
+    margin: 0px auto;
+}
+    
+#pics {
+    width: 1000px;
+    margin: 0px auto;
+}
+    
+#cover {
+    width: 100%;
+    height: 310px;
+}
+
+#profile {
+    position: absolute;
+    z-index: 5;
+    width: 196px;
+    height: 196px;
+    border: 2px solid #FFFFFF;
+    margin: 140px 0px 0px -975px;
+}
+
+#pics h1 {
+    margin: -78px 0px 0px 250px;
+}
+    
+#main {
+    display: block;
+    width: 1000px;
+    margin: 0px auto;
+}
+
+#main nav, #main nav ul {
+    width: 1000px;
+    height: 48px;
+    float: left;
+    margin: 0px auto;
+    background-color: #FFFFFF;
+    border-radius: 0px 0px 5px 5px;
+}
+
+#main nav ul li {
+    margin: 0px auto;
+    min-width: 96px;
+    width: auto;
+    height: 48px;
+    background-color: none;
+    border-radius: 0px;
+    
+}
+
+#main nav ul li:first-child {
+    margin: 0px auto;
+}
+    
+#main nav ul li:hover {
+    background-color: #EEEEEE;
+}
+
+#main nav ul li a h3 {
+    line-height: 48px;
+    font-size: 1.3em;
+    font-weight: 400;
+    color: #512888;
+    padding: 0px 15px 0px 15px;
+}
+
+#main nav ul li a img {
+    display: none;
+}
+    
+#main article {
+    display: inline-block;
+    float: left;
+    width: 600px;
+    margin: 15px 0px 10px 400px;
+}
+    
+#about {
+    width: 350px !important;
+    margin: 15px 0px 0px 0px !important;
+}
+    
+#main article:nth-child(3) {
+    margin: 15px 0px 0px 50px;
+}
+    
+#photos {
+    text-align: center;
+}
+    
+#photos h3 {
+    text-align: left;
+}
+    
+.thumblink {
+    display: inline-block;
+    pointer-events: all;
+    cursor: auto;
+}
+    
+.thumbnail {
+    width: auto;
+    float: left;
+    max-height: 150px;
+    margin: 1px;
+}
+    
+.lightbox {
+	display: none;
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 5%;
+}
+
+.lightbox:target {
+	outline: none;
+	display: block;
+}
+}

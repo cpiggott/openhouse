@@ -22,6 +22,7 @@ class HomeController extends BaseController {
 		} else {
 			return View::make('home');
 		}
+		// return View::make('views.scholar');
 	}
 
 }

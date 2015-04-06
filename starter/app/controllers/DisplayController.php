@@ -72,19 +72,16 @@ class DisplayController extends BaseController {
             return View::make('views.github')->with('display', $display);
             break;
         case 1:
-            echo "Open Class Display";
+            return View::make('views.scholar')->with('display', $display);
             break;
         case 2:
-            echo "Technical Display";
+					return View::make('views.stackoverflow')->with('display', $display);
             break;
         case 3:
-            echo "Freshman/Sophomore Display";
+					return View::make('views.reddit')->with('display', $display);
             break;
         case 4:
-            echo "Graduate Dispaly";
-            break;
-        case 5:
-            echo "Student Club Display";
+						return View::make('views.facebook')->with('display', $display);
             break;
       }
     } else {
@@ -98,7 +95,34 @@ class DisplayController extends BaseController {
       //var_dump($display->teamname);
       return View::make('edit.editdisplay')->with('display', $display);
     } else {
-      return Redirect::to('')->with('error', 'You are nto authorized to create a display.');
+      return Redirect::to('')->with('error', 'You are not authorized to create a display.');
+    }
+  }
+
+  public function postEditDisplay($code){
+
+    $display = Display::find($code);
+    if(Auth::check() && $display->user_id == Auth::user()->id){
+      $teamName = Input::get('teamName');
+      $projectName = Input::get('projectName');
+      $username = Input::get('userName');
+      $type = Input::get('displayType');
+      $content = Input::get('content');
+      $user_id = Auth::id();
+
+      $content = addslashes($content);
+
+      $display->teamname = $teamname;
+      $display->project_name = $projectName;
+      $display->team_members = $username;
+      $display->type = $type;
+      $display->content = $content;
+      $display->user_id = $user_id;
+
+      $display->save();
+      return Redirect::to('')->with('success', 'You have updated your display info successfully');
+    } else {
+      return Redirect::to('home')->withErrors();
     }
   }
 

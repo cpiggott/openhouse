@@ -48,8 +48,14 @@ Route::get('display/view/{code}', array(
 );
 
 Route::get('display/edit/{code}', array(
-	'as' => 'editDispaly',
+	'as' => 'editDisplay',
 	'uses' => 'DisplayController@editDisplay'
+	)
+);
+
+Route::post('display/edit/{code}', array(
+	'as' => 'editDisplayPost',
+	'uses' => 'DisplayController@postEditDisplay'
 	)
 );
 

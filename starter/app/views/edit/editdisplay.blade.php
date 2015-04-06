@@ -20,7 +20,7 @@
 
 
 
-    {{ Form::open(array('url' => 'display/create', 'class' => 'form-horizontal')) }}
+    {{ Form::open(array('url' => 'display/edit/'echo $display->id'', 'class' => 'form-horizontal')) }}
       <div class="form-group">
         <label for="inputTeamName"  class="col-sm-2 control-label">Team Name</label>
         <div class="col-sm-10">
@@ -60,7 +60,7 @@
       </div>
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="submit" class="btn btn-default">Save</button>
           {{ Form::token() }}
         </div>
       </div>
@@ -73,6 +73,6 @@
 </div>
 
 <div class="">
-    {{ QrCode::size(300)->generate(Request::url()); }}
+    {{ QrCode::format('svg')->size(399)->color(40,40,40)->generate(Request::url()); }}
 </div>
 @stop
