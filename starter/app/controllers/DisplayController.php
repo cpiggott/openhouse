@@ -36,24 +36,34 @@ class DisplayController extends BaseController {
   //Add more error checking
   //Creates the Display in the database
   public function postCreateDisplay(){
-    $teamName = Input::get('inputTeamName');
-    $projectName = Input::get('projectName');
-    $username = Input::get('userName');
-    $type = Input::get('displayType');
-    $content = Input::get('content');
-    $user_id = Auth::id();
-		$teamNames = Input::get('teamMemberNames');
+
+    // $projectName = Input::get('projectName');
+    // $username = Input::get('userName');
+    // $type = Input::get('displayType');
+    // $content = Input::get('content');
+    // $user_id = Auth::id();
+		// $teamMemberNames = Input::get('teamMemberNames');
+		// $teamName = Input::get('teamName');
+
+		$teamname = Input::get('team_name');
+		$project_name = Input::get('project_name');
+		$team_members = Input::get('team_members');
+		$content = Input::get('content');
+		$user_id = Auth::id();
+		$type = Input::get('displayType');
+
 
     $content = addslashes($content);
 
     $display = Display::create( array(
-      'teamname' => $teamName,
-      'project_name' => $projectName,
-      'team_memebrs' => $username,
+      'teamname' => $teamname,
+      'project_name' => $project_name,
+      'team_members' => $team_members,
       'content' => $content,
       'user_id' => $user_id,
       'type' => $type,
-			'names' => $teamNames
+			'names' => '',
+			'contact' => ''
       )
     );
 
