@@ -115,7 +115,7 @@ class DisplayController extends BaseController {
 
       $content = addslashes($content);
 
-      $display->teamname = $teamname;
+      $display->teamname = $teamName;
       $display->project_name = $projectName;
       $display->team_members = $username;
       $display->type = $type;
