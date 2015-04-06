@@ -42,7 +42,7 @@ class DisplayController extends BaseController {
     $type = Input::get('displayType');
     $content = Input::get('content');
     $user_id = Auth::id();
-		$teamNames = Input('teamMemberNames');
+		$teamNames = Input::get('teamMemberNames');
 
     $content = addslashes($content);
 
