@@ -120,10 +120,11 @@ class DisplayController extends BaseController {
       $display->team_members = $username;
       $display->type = $type;
       $display->content = $content;
-      $display->user_id = $user_id;
 			$display->names = $teamNames;
 
       $display->save();
+			$display->push();
+
       return Redirect::to('')->with('success', 'You have updated your display info successfully');
     } else {
       return Redirect::to('home')->withErrors();

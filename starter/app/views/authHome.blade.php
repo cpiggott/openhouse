@@ -55,7 +55,7 @@
     <br>
 </div>
 
-<div class="row">
+<!-- <div class="row">
   <div class="col-md-12">
     <div class="list-group">
       <a href="" class="list-group-item disabled">Edit Your Projects(Click to edit )</a>
@@ -69,7 +69,7 @@
 
     </div>
   </div>
-</div>
+</div> -->
 
 <div class="row">
   <div class="col-md-12">
