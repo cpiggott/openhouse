@@ -36,7 +36,7 @@ class DisplayController extends BaseController {
   //Add more error checking
   //Creates the Display in the database
   public function postCreateDisplay(){
-    $teamName = Input::get('teamName');
+    $teamName = Input::get('inputTeamName');
     $projectName = Input::get('projectName');
     $username = Input::get('userName');
     $type = Input::get('displayType');
