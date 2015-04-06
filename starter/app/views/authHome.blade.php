@@ -71,6 +71,22 @@
   </div>
 </div>
 
+<div class="row">
+  <div class="col-md-12">
+    <div class="list-group">
+      <a href="" class="list-group-item disabled">View Your Projects(Click to Views)</a>
+      <?php
+        $userid = Auth::user()->id;
+        $displays = DB::table('displays')->where('user_id', '=', $userid)->orderby('updated_at', 'desc')->get();
+      ?>
+      @foreach ($displays as $display)
+        <a href="display/view/{{$display->id}}" class="list-group-item"><span class="glyphicon glyphicon-list-alt"></span> &nbsp &nbsp {{$display->project_name}} last editied: {{$display->updated_at}} </a>
+      @endforeach
+
+    </div>
+  </div>
+</div>
+
 
 
 

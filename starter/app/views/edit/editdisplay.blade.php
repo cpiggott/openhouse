@@ -26,7 +26,13 @@ $displayURL = 'display/edit/'.$display->id;
       <div class="form-group">
         <label for="inputTeamName"  class="col-sm-2 control-label">Team Name</label>
         <div class="col-sm-10">
-          <input type="text" name="teamName" class="form-control" id="inputTeamName" placeholder="TeamName" value="{{$display->teamname}}">
+          <input type="text" name="teamName" class="form-control" id="inputTeamName" placeholder="Team Name" value="{{$display->teamname}}">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputNames" class="col-sm-2 control-label">Team Member Names</label>
+        <div class="col-sm-10">
+          <input type="text" name="teaMembersNames"  class="form-control" id="teamMemberNames" placeholder="Team Members Names Separated by Comma(,)">
         </div>
       </div>
       <div class="form-group">
@@ -70,10 +76,11 @@ $displayURL = 'display/edit/'.$display->id;
 {{ Form::close() }}
 
 <div>
-  <h3> Your Project QR Code </h3>
+  <h3> Your Project QR Code. Share this with people visiting. </h3>
+  <p>You will have to screen cap this if you want use it sorry, couldn't get PNG's working in time </p>
 </div>
 
 <div class="">
-    {{ QrCode::format('svg')->size(399)->color(40,40,40)->generate(Request::url()); }}
+    {{ QrCode::format('svg')->size(399)->color(40,40,40)->generate(URL::to('/display/view/'.$display->id)) }}
 </div>
 @stop

@@ -42,6 +42,7 @@ class DisplayController extends BaseController {
     $type = Input::get('displayType');
     $content = Input::get('content');
     $user_id = Auth::id();
+		$teamNames = Input('teamMemberNames');
 
     $content = addslashes($content);
 
@@ -51,7 +52,8 @@ class DisplayController extends BaseController {
       'team_memebrs' => $username,
       'content' => $content,
       'user_id' => $user_id,
-      'type' => $type
+      'type' => $type,
+			'names' => $teamNames
       )
     );
 
@@ -103,12 +105,13 @@ class DisplayController extends BaseController {
 
     $display = Display::find($code);
     if(Auth::check() && $display->user_id == Auth::user()->id){
-      $teamName = Input::get('teamName');
+      $teamName = Input::get('inputTeamName');
       $projectName = Input::get('projectName');
       $username = Input::get('userName');
       $type = Input::get('displayType');
       $content = Input::get('content');
       $user_id = Auth::id();
+			$teamNames = Input('teamMemberNames');
 
       $content = addslashes($content);
 
@@ -118,6 +121,7 @@ class DisplayController extends BaseController {
       $display->type = $type;
       $display->content = $content;
       $display->user_id = $user_id;
+			$display->names = $teamNames;
 
       $display->save();
       return Redirect::to('')->with('success', 'You have updated your display info successfully');
