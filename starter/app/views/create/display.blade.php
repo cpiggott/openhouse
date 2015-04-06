@@ -43,10 +43,10 @@
           <input type="text" name="userName"  class="form-control" id="userName" placeholder="Your Name">
         </div>
       </div>
-      <!-- <div class="form-group">
+      <div class="form-group">
         <div class="col-sm-2 control-label"></div>
         <p style="color: red">&nbsp;&nbsp;&nbsp;&nbsp;Make sure to choose correctly, this cannot be changed!</p>
-      </div> -->
+      </div>
       <div class="form-group">
         <label for="inputType" class="col-sm-2 control-label">Display Type</label>
         <div class="col-sm-10">
@@ -59,10 +59,10 @@
           </select>
         </div>
       </div>
-      <!-- <div class="form-group">
+      <div class="form-group">
         <div class="col-sm-2 control-label"></div>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;Please make sure that images placed in editor below are no bigger than 300px wide.</p>
-      </div> -->
+      </div>
       <div class="form-group">
         <label for="inputName" class="col-sm-2 control-label">Display Information</label>
         <div class="col-sm-10">
