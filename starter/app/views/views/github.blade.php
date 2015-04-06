@@ -79,9 +79,7 @@
         {{$display->teamname}}
       </a>
       <!-- Foreach here -->
-      <a href="#" class="list-group-item">Chris Piggott</a> <!-- mailto? -->
-      <a href="#" class="list-group-item">Ethan Schwaiger</a> <!-- mailto? -->
-      <a href="#" class="list-group-item disabled">More Info</a> <!-- mailto? -->
+      <!-- <a href="#" class="list-group-item disabled">More Info</a> <!-- mailto? --> -->
       <a href="http://cis.ksu.edu" class="list-group-item">CIS Homepage</a> <!-- mailto? -->
       <a href="http://engg.ksu.edu" class="list-group-item">Engineering Homepage</a>
       <a href="http://ksu.edu" class="list-group-item">K-State Homepage</a>
