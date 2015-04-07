@@ -14,6 +14,6 @@ class Display extends Eloquent implements RemindableInterface {
 	 */
 	protected $table = 'displays';
 
-	protected $fillable = array('id', 'teamname', 'project_name', 'team_members', 'type', 'content', 'user_id');
+	protected $fillable = array('id', 'teamname', 'project_name', 'team_members', 'type', 'content', 'user_id', 'url1', 'url2', 'url3');
 
 }

@@ -36,6 +36,10 @@
 
 {{-- Content --}}
 @section('content')
+@stop
+
+{{-- Content --}}
+@section('content')
     @if ($errors->has())
         <div id="errors" class="alert alert-danger">
             @foreach ($errors->all() as $error)
@@ -44,7 +48,7 @@
         </div>
         @endif
 <div class="page-header">
-    <h2><span class="glyphicon glyphicon-book"></span><a href="{{{ URL::to('') }}}">  open_house</a> / <a href="{{{ URL::to('') }}}"> {{$display->teamname}}</a></h2>
+    <h2><span class="glyphicon glyphicon-book"></span><a href="{{ URL::to('') }}">  open_house</a> / <a href="{{ URL::to('') }}"> {{$display->teamname}}</a></h2>
 </div>
 
 <div>
@@ -82,7 +86,10 @@
       <!-- <a href="#" class="list-group-item disabled">More Info</a> <!-- mailto? --> -->
       <a href="http://cis.ksu.edu" class="list-group-item">CIS Homepage</a> <!-- mailto? -->
       <a href="http://engg.ksu.edu" class="list-group-item">Engineering Homepage</a>
+      <a href="http://cis.ksu.edu/prospective/programmedforsuccess">Majors</a>
       <a href="http://ksu.edu" class="list-group-item">K-State Homepage</a>
+      <a href="http://cis.ksu.edu/courses">Courses</a>
+      <a href="http://cis.ksu.edu/prospective/careers">Careers</a>
     </div>
   </div>
 </div>

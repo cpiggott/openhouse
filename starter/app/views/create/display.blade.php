@@ -26,9 +26,9 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="project_name" class="col-sm-2 control-label">Project Name</label>
+        <label for="project_name" class="col-sm-2 control-label">Project or Team Name</label>
         <div class="col-sm-10">
-          <input type="text" name="project_name"  class="form-control" id="project_name" placeholder="Project Name">
+          <input type="text" name="project_name"  class="form-control" id="project_name" placeholder="Project or Club Name">
         </div>
       </div>
       <div class="form-group">
@@ -68,6 +68,34 @@
         <div class="col-sm-10">
           <textarea name="content" class="form-control ckeditor" id="contentInput">Insert Snippet here</textarea>
         </div>
+      </div>
+      <div class="form-group">
+        <label for="inputName" class="col-sm-2 control-label" style="color: red">Club Displays Only</label>
+        <div class="col-sm-2 control-label"></div>
+        <p>Please provide 3 image urls that represent your club.</p>
+      </div>
+      <div class="form-group">
+        <label for="inputWeb1" class="col-sm-2 control-label">Image URL 1</label>
+        <div class="col-sm-10">
+          <input type="text" name="web1"  class="form-control" id="web1" placeholder="Please provide an image URL for your club">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputWeb2" class="col-sm-2 control-label">Image URL 2</label>
+        <div class="col-sm-10">
+          <input type="text" name="web2"  class="form-control" id="web2" placeholder="Please provide an image URL for your club">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputWeb3" class="col-sm-2 control-label">Image URL 3</label>
+        <div class="col-sm-10">
+          <input type="text" name="web3"  class="form-control" id="web3" placeholder="Please provide an image URL for your club">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputName" class="col-sm-2 control-label" >Check Info</label>
+        <div class="col-sm-2 control-label"></div>
+        <p>Please all information above is correct and submit. Thanks!</p>
       </div>
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">

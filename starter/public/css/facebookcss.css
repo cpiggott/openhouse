@@ -38,7 +38,7 @@ select, input, textarea {font: 99% sans-serif;}
 table {font-size: inherit; font: 100%;}
 small {font-size: 85%;}
 strong {font-weight: bold;}
-td, td img {vertical-align: top;} 
+td, td img {vertical-align: top;}
 sub, sup {font-size: 75%; line-height: 0; position: relative;}
 sup {top: -0.5em;}
 sub {bottom: -0.25em;}
@@ -47,9 +47,9 @@ pre, code, kbd, samp {font-family: monospace, sans-serif;}
 button, input, select, textarea {margin: 0;}
 button, input[type=button] {width: auto; overflow: visible;}
 .ie7 img {-ms-interpolation-mode: bicubic;}
-.clearfix:before, .clearfix:after {content: "\0020"; display: block; height: 0; overflow: hidden;}  
-.clearfix:after {clear: both;}  
-.clearfix {zoom: 1;} 
+.clearfix:before, .clearfix:after {content: "\0020"; display: block; height: 0; overflow: hidden;}
+.clearfix:after {clear: both;}
+.clearfix {zoom: 1;}
 
 /*
 ---------------------------------------------------
@@ -124,7 +124,7 @@ header nav ul li a:hover svg path {
     display: inline-block;
     width: 100%;
     height: 240px;
-    background-image: url(assets/cover.jpg);
+    background-image: url(/facebookassets/cover.jpg);
 }
 
 #profile {
@@ -134,7 +134,7 @@ header nav ul li a:hover svg path {
     margin: -110px 0px 0px 15px;
     border: 2px solid #FFFFFF;
     border-radius: 2px;
-    background-image: url(assets/profile.jpg);
+    background-image: url(/facebookassets/profile.jpg);
 }
 
 #pics h1 {
@@ -177,7 +177,7 @@ header nav ul li a:hover svg path {
 @media screen and (min-width: 400px){
 #main nav ul li, #main nav ul li:first-child {
     margin: 15px 4% 15px 4%;
-} 
+}
 }
 
 #main nav ul li a h3 {
@@ -239,18 +239,18 @@ header nav ul li a:hover svg path {
                   Desktop Styles
 ---------------------------------------------------
 */
-    
+
 @media screen and (min-width: 1024px){
 header nav ul {
     width: 1000px;
     margin: 0px auto;
 }
-    
+
 #pics {
     width: 1000px;
     margin: 0px auto;
 }
-    
+
 #cover {
     width: 100%;
     height: 310px;
@@ -268,7 +268,7 @@ header nav ul {
 #pics h1 {
     margin: -78px 0px 0px 250px;
 }
-    
+
 #main {
     display: block;
     width: 1000px;
@@ -291,13 +291,13 @@ header nav ul {
     height: 48px;
     background-color: none;
     border-radius: 0px;
-    
+
 }
 
 #main nav ul li:first-child {
     margin: 0px auto;
 }
-    
+
 #main nav ul li:hover {
     background-color: #EEEEEE;
 }
@@ -313,44 +313,44 @@ header nav ul {
 #main nav ul li a img {
     display: none;
 }
-    
+
 #main article {
     display: inline-block;
     float: left;
     width: 600px;
     margin: 15px 0px 10px 400px;
 }
-    
+
 #about {
     width: 350px !important;
     margin: 15px 0px 0px 0px !important;
 }
-    
+
 #main article:nth-child(3) {
     margin: 15px 0px 0px 50px;
 }
-    
+
 #photos {
     text-align: center;
 }
-    
+
 #photos h3 {
     text-align: left;
 }
-    
+
 .thumblink {
     display: inline-block;
     pointer-events: all;
     cursor: auto;
 }
-    
+
 .thumbnail {
     width: auto;
     float: left;
     max-height: 150px;
     margin: 1px;
 }
-    
+
 .lightbox {
 	display: none;
 	position: fixed;

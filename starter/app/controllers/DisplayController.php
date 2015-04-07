@@ -52,6 +52,10 @@ class DisplayController extends BaseController {
 		$user_id = Auth::id();
 		$type = Input::get('displayType');
 
+		$urlProf = Input::get('web1');
+		$urlOther1 = Input::get('web2');
+		$urlOther2 = Input::get('web3');
+
 
     $content = addslashes($content);
 
@@ -62,8 +66,9 @@ class DisplayController extends BaseController {
       'content' => $content,
       'user_id' => $user_id,
       'type' => $type,
-			'names' => '',
-			'contact' => ''
+			'url1' => $urlProf,
+			'url2' => $urlOther1,
+			'url3' => $urlOther2
       )
     );
 

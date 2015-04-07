@@ -38,7 +38,7 @@ select, input, textarea {font: 99% sans-serif;}
 table {font-size: inherit; font: 100%;}
 small {font-size: 85%;}
 strong {font-weight: bold;}
-td, td img {vertical-align: top;} 
+td, td img {vertical-align: top;}
 sub, sup {font-size: 75%; line-height: 0; position: relative;}
 sup {top: -0.5em;}
 sub {bottom: -0.25em;}
@@ -47,9 +47,9 @@ pre, code, kbd, samp {font-family: monospace, sans-serif;}
 button, input, select, textarea {margin: 0;}
 button, input[type=button] {width: auto; overflow: visible;}
 .ie7 img {-ms-interpolation-mode: bicubic;}
-.clearfix:before, .clearfix:after {content: "\0020"; display: block; height: 0; overflow: hidden;}  
-.clearfix:after {clear: both;}  
-.clearfix {zoom: 1;} 
+.clearfix:before, .clearfix:after {content: "\0020"; display: block; height: 0; overflow: hidden;}
+.clearfix:after {clear: both;}
+.clearfix {zoom: 1;}
 
 /*
 ---------------------------------------------------
@@ -204,112 +204,31 @@ header label {
     height: 100%;
 }
 
-#tour {
+#question, #answer {
     display: block;
     width: 95%;
-    margin: 20px auto;
-    background-image: url(assets/linebg.png);
-    background-repeat: repeat;
-    border: 5px solid #E6E6E6;
-    padding: 15px;
-}
-
-#tourleft {
-    display: block;
-    width: 100%;
-}
-
-#tourbtn {
-    display: block;
-    width: 80%;
-    height: 40px;
-    margin: 10px auto;
-    background-color: #512888;
-    color: #FFFFFF;
-    border-radius: 5px;
-    line-height: 2.5em;
-    text-align: center;
-}
-
-#tourbtn a {
-    display: block;
-    height: 100%;
-}
-
-#tourright {
-    display: block;
-    width: 100%;
-    margin-top: 25px;
-    text-align: center;
-}
-
-#tourright h3 {
-    text-align: left;
-}
-
-#tourright img {
-    display: block;
-    margin: 0px auto;
-}
-
-#tourright p {
-    margin-bottom: 15px;
-}
-
-#questions {
-    display: block;
-    width: 100%;
     padding: 5px;
 }
 
-#questions article {
-    display: table;
-    width: 100%;
+#question h3 {
+    color: #512888;
 }
 
-.stats {
-    display: table-footer-group;
-    width: 100%;
+#question p, #answer p {
+    margin-top: 5px;
 }
 
-.votes, .answers, .views {
-    display: inline-block;
-    width: 32%;
-    margin: 5px auto;
-    text-align: center;
+#question span, #answer span {
+    color: #512888;
 }
 
-.question {
+#categories {
     display: block;
     width: 100%;
-    color: #3366BB;
+    margin: 8px auto;
 }
 
-.timestamp {
-    display: block;
-    width: 100%;
-    float: right;
-    text-align: right;
-}
-
-.timestamp p {
-    margin: 10px 0px 10px 0px;
-}
-
-.timestamp span {
-    color: #3366BB;
-}
-
-.categories {
-    display: block;
-    width: 100%;
-}
-
-.categories ul {
-    margin-bottom: 10px;
-}
-
-.category {
+#categories ul li {
     display: inline-block;
     width: auto;
     height: 30px;
@@ -320,35 +239,10 @@ header label {
     border: 1px solid #C0D4DB;
 }
 
-aside {
-    display: block;
-    width: 100%;
-    margin: 20px auto;
-    border: 5px solid #512888;
-}
-
-aside h3 {
-    text-align: center;
-    background-color: #512888;
-    color: #FFFFFF;
-    padding: 10px 0px 10px 0px;
-}
-
-aside p {
-    display: block;
-    width: 100%;
-    padding: 10px;
-}
-
-aside img {
-    display: inline-block;
-    float: left;
-    padding: 15px 10px 10px 10px;
-}
-
 footer {
     display: block;
     width: 100%;
+    margin-top: 10px;
     padding: 10px;
     text-align: center;
     background-color: #F0F0F0;
@@ -361,14 +255,15 @@ footer {
     width: 80%;
     margin: 0px auto;
 }
+}
 
 /*
 ---------------------------------------------------
                   Desktop Styles
 ---------------------------------------------------
 */
-    
-@media screen and (min-width: 1024px){
+
+@media screen and (min-width: 1024px) {
 
 /* ---------- Header ---------- */
 #hlogo {
@@ -379,7 +274,7 @@ footer {
 header label {
     display: none;
 }
-    
+
 #nav {
     display: inline-block;
     width: 50%;
@@ -395,19 +290,19 @@ header label {
     background-image: none;
     border-bottom: none;
 }
-    
+
 #nav ul li a {
     color: #FFFFFF;
 }
-    
-    
+
+
 #navbtn ~ #nav {
     visibility: visible;
 }
 /* ---------- Main ---------- */
 
 #main {
-    width: 65%;
+    width: 80%;
     margin: 0px auto;
 }
 
@@ -416,83 +311,23 @@ header label {
     max-width: 30%;
     height: 30%;
 }
-    
+
 #mainnav {
     display: inline-block;
     vertical-align: top;
     width: 69%;
     margin-top: 15px;
 }
-    
+
 #mainnav ul {
     text-align: right;
 }
-    
-#tour {
-    width: 100%;
-    float: left;
-}
-    
-#tourleft {
-    display: inline-block;
-    width: 49%;
-    float: left;
-}
-    
-#tour hr {
-    display: none;
-}
-    
-#tourright {
-    display: inline-block;
-    width: 49%;
-    float: right;
-    margin-top: 0px;
-}
 
-#tourright p {
-    display: inline-block;
-    width: 32%;
-    vertical-align: top;
-}
-    
-#questions {
-    display: inline-block;
-    width: 75%;
-    float: left;
-}
-    
 .stats {
     display: inline-block;
-    width: 31%;
-    float: left;
+    margin-top: 15px;
 }
-    
-.question {
-    display: inline-block;
-    width: 69%;
-    float: left;
-    vertical-align: top;
-    margin-top: 6px;
-}
-    
-.timestamp {
-    display: inline-block;
-    width: 40%;
-}
-    
-.categories {
-    display: inline-block;
-    width: 60%;
-    margin-top: 10px;
-}
-    
-aside {
-    display: inline-block;
-    width: 24%;
-    float: right;
-}
-    
+
 footer {
     float: right;
 }

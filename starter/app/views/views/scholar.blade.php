@@ -55,10 +55,11 @@
 <footer>
 <nav>
     <ul>
-        <li><a href="#">About K-State ACM</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Terms</a></li>
-        <li><a href="#">Provide Feedback</a></li>
+      <li><a href="{{ URL::to('') }}">Home</a></li>
+      <li><a href="http://cis.ksu.edu/prospective/programmedforsuccess">Majors</a></li>
+      <li><a href="http://cis.ksu.edu/courses">Courses</a></li>
+      <li><a href="http://cis.ksu.edu/prospective/careers">Careers</a></li>
+      <li><a href="http://flowcharts.engg.ksu.edu/">Flowcharts</a></li>
     </ul>
 </nav>
 </footer>

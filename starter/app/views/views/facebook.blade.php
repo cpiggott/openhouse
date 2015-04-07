@@ -13,19 +13,20 @@
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+
 </head>
 
 <body>
 <header>
     <nav>
         <ul>
-            <li><a href="#"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <li><a href="{{URL::to('')}}"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
 <path fill="#512888" d="M943.6,81.8H56.4C47.3,81.8,37,92,37,101.2v820.6c0,9.2,10.2,19.4,19.4,19.4h887.1
 	c9.2,0,19.4-10.2,19.4-19.4V101.2C963,92,952.7,81.8,943.6,81.8z M857.6,835.8H142.4V453.3h715.2V835.8z M147.3,183.3h156.6v161.5
 	H147.3V183.3z M808.4,183.3v56.8H369v-56.8H808.4z M369,294.2h334.1v50.6H369V294.2z"/>
 </svg></a></li>
-            <li><a href="#"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <li><a href="http://people.cis.ksu.edu"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
 <path fill="#512888" d="M459.6,608c-8-15.2-10.1-37.8-11.6-44.1l-11.5-3.1c-14.3-107.6,1-23.3,25-141.5c0.7,0.4,1.5,0.6,2.1,0.6
 	c6.8,0,8.3-22.3,11.2-39.3c3.1-18.8,8.4-34.5-8.3-34.5c3.6-72.3,14.2-123.3-26-159.6c-40.2-36.2-60.4-34.9-28.2-61.4
@@ -37,7 +38,7 @@
 	c-83.4,46.5-30.3,204.7-85.8,279.4l14.8,3.1l-3.1,5.1c23.9,4.9,46.9,22.6,60.7,24c2,16.1,4.2,61-9.3,78.6l-10.6,2.3
 	c22.1,13.7,38,27.4,49.7,44.5c33.5,33.5,34.6,81.3,44.6,212.1h265.4C925,719,938,710.5,839.5,668.4z"/>
 </svg></a></li>
-            <li><a href="#"><svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <li><a href=""><svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
 <path fill="#512888" d="M900.6,55.3H119.4c-24.6,0-44.6,20-44.6,44.6v558c0,24.7,20,44.6,44.6,44.6h245.5v223.2l262.9-223.2h272.8
 	c24.6,0,44.6-20,44.6-44.6v-558C945.2,75.3,925.2,55.3,900.6,55.3z"/>
@@ -90,16 +91,16 @@
     </nav>
     <div id="pics">
         <div id="cover"></div>
-        <div id="profile"></div>
+        <div id="profile"><img src="{{$display->url1}}"/></div>
         <h1>{{$display->teamname}}</h1>
     </div>
 </header>
 <div id="main">
     <nav>
         <ul>
-            <li><a href="#"><img src="/facebookassets/profile/1.jpg"/><h3>About</h3></a></li>
-            <li><a href="#"><img src="/facebookassets/profile/2.jpg" /><h3>Photos</h3></a></li>
-            <li><a href="#"><img src="/facebookassets/profile/3.jpg" /><h3>Schedule</h3></a></li>
+            <li><a href="#"><img src="{{$display->url1}}"/><h3>About</h3></a></li>
+            <li><a href="photos"><img src="{{$display->url2}}" /><h3>Photos</h3></a></li>
+            <li><a href="#"><img src="{{$display->url3}}" /><h3>Schedule</h3></a></li>
 
         </ul>
     </nav>
@@ -109,7 +110,6 @@
         <p>{{$display->teamname}} meets at K-State.</p>
         <p>The CIS department is in Nichols Hall.</p>
         <hr />
-        <p><a href="#">See more...</a></p>
     </article>
     <article id="schedule">
         <h3>Information</h3>
@@ -120,17 +120,17 @@
         <h3>PHOTOS</h3>
         <hr />
         <!-- Thumbnail -->
-        <a class="thumblink" href="#img1"><img class="thumbnail" src="/facebookassets/profile/1.jpg" /></a>
+        <a class="thumblink" href="#img1"><img class="thumbnail" src="{{$display->url1}}" /></a>
         <!-- Lightbox -->
-        <a href="#_" class="lightbox" id="img1"><img src="/facebookassets/profile/1.jpg"></a>
+        <a href="#_" class="lightbox" id="img1"><img src="{{$display->url1}}"></a>
         <!-- Thumbnail -->
-        <a class="thumblink" href="#img2"><img class="thumbnail" src="/facebookassets/profile/2.jpg" /></a>
+        <a class="thumblink" href="#img2"><img class="thumbnail" src="{{$display->url2}}" /></a>
         <!-- Lightbox -->
-        <a href="#_" class="lightbox" id="img2"><img src="/facebookassets/profile/2.jpg"></a>
+        <a href="#_" class="lightbox" id="img2"><img src="{{$display->url2}}"></a>
         <!-- Thumbnail -->
-        <a class="thumblink" href="#img3"><img class="thumbnail" src="/facebookassets/profile/3.jpg" /></a>
+        <a class="thumblink" href="#img3"><img class="thumbnail" src="{{$display->url3}}" /></a>
         <!-- Lightbox -->
-        <a href="#_" class="lightbox" id="img3"><img src="/facebookassets/profile/3.jpg"></a>
+        <a href="#_" class="lightbox" id="img3"><img src="{{$display->url3}}"></a>
     </article>
 
 </div>
